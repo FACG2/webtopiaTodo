@@ -47,7 +47,7 @@ test('should return an array after marking the task', function (t) {
 
 // Sort test
 
-test('should return an array after marking the task', function (t) {
+test('should return an array after sorting the task', function (t) {
   t.deepEqual(todoFunctions.sortTodos(todoList),
     [{id: 1, description: 'make eggs', done: true},
     {id: 3, description: 'make launch', done: true},
@@ -60,7 +60,7 @@ test('should return an array after marking the task', function (t) {
 });
 
 
-test('should return an array after marking the task', function (t) {
+test('should return an array after sorting the task', function (t) {
   t.deepEqual(todoFunctions.markTodo(todoList,0),
   [{id: 0, description: 'make tea', done: true},
   {id: 1, description: 'make eggs', done: true},

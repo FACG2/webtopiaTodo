@@ -52,16 +52,14 @@ var todoFunctions = {
           return -1 || a.id - b.id;
         }
         else if (a.done===false) return 1 || a.id - b.id ;
-
     })
 
+
     newArray.sort(function(a,b){
-      if (a.done===false) 
+      if (a.done===false)
           return  a.id - b.id;
 
     })
-
-
 
     return newArray;
 
