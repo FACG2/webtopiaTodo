@@ -1,3 +1,5 @@
+
+
 // Part 1. Fill in any missing parts of the todoFunction object!
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
@@ -25,19 +27,48 @@ var todoFunctions = {
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
   },
+
   markTodo: function(todos, idToMark) {
-    // should leave the input argument todos unchanged
-    // in the new todo array, all elements will remain unchanged except the one with id: idToMark
-    // this element will have its done value toggled
-    // hint: array.map
+    var newArray = todos.map(function(obj) {
+    var newObj =  Object.assign({}, obj);
+    if (newObj.id === idToMark) newObj.done = !newObj.done;
+    return newObj;
+    });
+    return newArray;
+
   },
-  sortTodos: function(todos, sortFunction) {
+  sortTodos: function(todos) {
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged
     // sortFunction will have same signature as the sort function in array.sort
     // hint: array.slice, array.sort
+    var newArray = todos.map(function(el) {
+    return Object.assign({}, el);
+    });
+
+    console.log(newArray);
+    newArray.sort(function(a,b){
+      if (a.done===true) {
+          return -1 || a.id - b.id;
+        }
+        else if (a.done===false) return 1 || a.id - b.id ;
+
+    })
+
+    newArray.sort(function(a,b){
+      if (a.done===false) 
+          return  a.id - b.id;
+
+    })
+
+
+
+    return newArray;
+
   },
 };
+
+
 
 
 // Why is this if statement necessary?
