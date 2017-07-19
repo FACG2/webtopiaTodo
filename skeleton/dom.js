@@ -32,13 +32,13 @@
     } else {
       spanDescription.classList.remove('checked') ;
     }
-   
+
 
 
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
-    var txt = document.createTextNode("\u00D7");
+    var txt = document.createTextNode("\ ");
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -48,7 +48,7 @@
     todoNode.appendChild(deleteButtonNode);
 
     // add markTodo button
-    
+
     todoNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
@@ -74,6 +74,8 @@
       };
       var newState = todoFunctions.addTodo(state, todoObject);
       update(newState);
+      document.getElementsByName("description")[0].value = "";
+
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what does event.preventDefault do?
       //Returns a boolean indicating whether or not event.preventDefault() was called on the event.
