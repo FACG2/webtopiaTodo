@@ -20,8 +20,8 @@ if(localStorage.getItem('newState') ===null) {
 localStorage.setItem('newState', JSON.stringify(newState1));
 } else  state = JSON.parse(localStorage.getItem('newState'));
 
- 
- 
+
+
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
@@ -43,13 +43,13 @@ localStorage.setItem('newState', JSON.stringify(newState1));
     } else {
       spanDescription.classList.remove('checked') ;
     }
-   
+
 
 
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
-    var txt = document.createTextNode("\u00D7");
+    var txt = document.createTextNode("\ ");
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       localStorage.setItem('newState', JSON.stringify(newState));
@@ -60,7 +60,7 @@ localStorage.setItem('newState', JSON.stringify(newState1));
     todoNode.appendChild(deleteButtonNode);
 
     // add markTodo button
-    
+
     todoNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       localStorage.setItem('newState', JSON.stringify(newState));
@@ -90,8 +90,11 @@ localStorage.setItem('newState', JSON.stringify(newState1));
       };
       var newState = todoFunctions.addTodo(state, todoObject);
       localStorage.setItem('newState', JSON.stringify(newState));
-      
+
       update(newState);
+
+      document.getElementsByName("description")[0].value = "";
+
 
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what does event.preventDefault do?
