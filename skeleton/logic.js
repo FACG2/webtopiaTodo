@@ -44,9 +44,9 @@ var todoFunctions = {
 
   markTodo: function(todos, idToMark) {
     var newArray = todos.map(function(obj) {
-    var newObj =  Object.assign({}, obj);
-    if (newObj.id === idToMark) newObj.done = !newObj.done;
-    return newObj;
+      var newObj = Object.assign({}, obj);
+      if (newObj.id === idToMark) newObj.done = !newObj.done;
+      return newObj;
     });
     return newArray;
 
@@ -63,9 +63,9 @@ var todoFunctions = {
     console.log(newArray);
     newArray.sort(function(a,b){
       if (a.done===true) {
-          return -1 || a.id - b.id;
+          return -1 //|| a.id - b.id;
         }
-        else if (a.done===false) return 1 || a.id - b.id ;
+        else if (a.done===false) return 1 //|| a.id - b.id ;
 
     })
 
@@ -74,13 +74,12 @@ var todoFunctions = {
           return  a.id - b.id;
 
     })
-
-
-
     return newArray;
 
   },
+
 };
+
 
 
 
