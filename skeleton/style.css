@@ -1,4 +1,8 @@
-body {
+
+    .checked {
+      text-decoration: line-through;
+    }
+    body {
     background-color: #34495e
 }
 
@@ -66,17 +70,14 @@ ul li.checked {
 }
 
 
-/* 
- ul li.checked::before { 
+/*
+ ul li.checked::before {
     content: '';
     position: absolute;
-     border-color: #fff; 
-
-
+     border-color: #fff;
  border-style: solid;
-    border-width: 0 2px 2px 0; 
+    border-width: 0 2px 2px 0;
 
- 
 top: 10px;
     left: 16px;
     transform: rotate(45deg);
