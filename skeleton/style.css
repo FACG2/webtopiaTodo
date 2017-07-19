@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#add-todo {
+  background-color: #4d90fe;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+#add-todo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  border: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #5E40FF;
+  color: #fff;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.form-h2{
+    margin:5px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 15px 50px 12px 50px;
+  border: none;
+  background: none;
+  font-size: 16px;
+}
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+ ul li:nth-child(odd) {
+  background: #f9f9f9;
+} 
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+.checked {
+  text-decoration: line-through;
+}

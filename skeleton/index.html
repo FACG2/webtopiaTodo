@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>tdd todo</title>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <form id="add-todo">
+      <h2 class="form-h2">My To Do List</h2>
+      <input type="text" name="description" value="" placeholder="write your task" aria-labelledby="add-todo">
+      <input type="submit" name="submit" value="Submit" class="addBtn">
+    </form>
+
     <div id = "todo-container">
         <ul>
         </ul>
     </div>
-    <form id="add-todo">
-      <input type="text" name="description" value="">
-      <input type="submit" name="" value="Submit">
-    </form>
+
+      <script type="text/javascript" src = "./logic.js"></script>
+      <script type="text/javascript" src = "./dom.js"></script>
   </body>
-  <script type="text/javascript" src = "./logic.js"></script>
-  <script type="text/javascript" src = "./dom.js"></script>
 </html>
