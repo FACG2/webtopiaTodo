@@ -1,0 +1,157 @@
+body {
+    background-color: #34495e
+}
+
+header {
+    text-align: center;
+    padding-top: 20vh;
+}
+
+header h1 {
+    font-size: 75px;
+    font-weight: 300;
+    margin: 80px 0 25px;
+    color: white;
+    font-family: 'Artifika', serif;
+}
+
+header h1 span {
+    font-weight: 700;
+    color: #68C3A3;
+}
+
+header h2 {
+    color: #ecf0f1;
+    font-size: 25PX;
+    padding-bottom: 20PX;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin-left: 30vw;
+    padding: 0 0 0 0;
+    width: 40vw;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 25px 8px 12px 40px;
+    background: #eee;
+    font-size: 25px;
+    transition: 0.2s;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    list-style: none;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ul li:hover {
+    background: #2980b9;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+
+/* 
+ ul li.checked::before { 
+    content: '';
+    position: absolute;
+     border-color: #fff; 
+
+
+ border-style: solid;
+    border-width: 0 2px 2px 0; 
+
+ 
+top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}    */
+
+#add-todo {
+    background-color: #16a085;
+    /* padding: 12px; */
+    color: white;
+    text-align: center;
+    width: 40vw;
+    margin-left: 30vw;
+}
+
+#add-todo:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 24px;
+}
+
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #7f8c8d;
+    color: white;
+    float: left;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-left: 1px solid black;
+}
+
+.addBtn:hover {
+    background-color: #16a085;
+}
+
+
+/* .form-h2 {
+    margin: 5px;
+} */
+
+.close {
+    position: absolute;
+    height: 65px;
+    right: 0;
+    top: 0;
+    padding: 30px 50px 16px 25px;
+    border: none;
+    background-image: url('img/del.png');
+    background-size: 70px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    border-left: 1px solid #95a5a6;
+}
+
+.close:hover {
+    background-color: #e74c3c;
+    color: white;
+    /* height: 65px; */
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        font-size: 150%;
+    }
+}
