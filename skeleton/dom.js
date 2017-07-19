@@ -49,6 +49,7 @@ localStorage.setItem('newState', JSON.stringify(newState1));
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
+    deleteButtonNode.setAttribute("title", "del");
     var txt = document.createTextNode("\ ");
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
