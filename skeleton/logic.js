@@ -60,7 +60,6 @@ var todoFunctions = {
     return Object.assign({}, el);
     });
 
-    console.log(newArray);
     newArray.sort(function(a,b){
       if (a.done===true) {
           return -1 //|| a.id - b.id;
@@ -70,7 +69,7 @@ var todoFunctions = {
     })
 
     newArray.sort(function(a,b){
-      if (a.done===false) 
+      if (a.done===false)
           return  a.id - b.id;
 
     })
