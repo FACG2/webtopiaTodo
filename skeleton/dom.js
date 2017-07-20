@@ -85,6 +85,7 @@ localStorage.setItem('newState', JSON.stringify(newState1));
       event.preventDefault();
       //var newDescription = document.getElementById("add-todo").description.value;
       var newDescription = document.getElementsByName("description")[0].value;
+      if (/\S/.test(newDescription)) {
       //console.log(newDescription);
       var todoObject = {
         description: newDescription
@@ -95,6 +96,9 @@ localStorage.setItem('newState', JSON.stringify(newState1));
       update(newState);
 
       document.getElementsByName("description")[0].value = "";
+      }else{
+        alert("Empty inputs not allowed!");
+      }
 
 
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit

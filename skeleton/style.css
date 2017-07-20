@@ -1,8 +1,7 @@
-
-    .checked {
-      text-decoration: line-through;
-    }
-    body {
+.checked {
+    text-decoration: line-through;
+}
+body {
     background-color: #34495e
 }
 
@@ -23,6 +22,9 @@ header h1 span {
     font-weight: 700;
     color: #68C3A3;
 }
+span{
+    text-justify: distribute;
+}
 
 header h2 {
     color: #ecf0f1;
@@ -32,6 +34,7 @@ header h2 {
 
 * {
     box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 ul {
@@ -53,6 +56,7 @@ ul li {
     -ms-user-select: none;
     user-select: none;
     list-style: none;
+    max-width: 546px;
 }
 
 ul li:nth-child(odd) {
@@ -125,8 +129,52 @@ input {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
-    header {
-        font-size: 150%;
-    }
+@media only screen and (max-width: 500px) {
+header h1 {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+header h2 {
+    font-size: 1em;
+    padding-bottom: 20PX;
+}
+
+#add-todo {
+    width: 70vw;
+    margin-left: 15vw; 
+}
+
+input {
+    font-size: 15px;
+}
+.addBtn {
+    font-size: 15px;
+}
+ul li {
+    font-size: 15px;
+    width: 70vw;
+    height: 10px;
+    align-items: center;
+}
+
+.close {
+    height: 100%;
+    padding: 0px 25px 0px 15px;
+    background-size: 35px;
+    font-size: 10px;
+}
+
+ul {
+    margin-left: 15vw;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+li span{
+    position: relative;
+    text-align: center;
+    top: -15px;
+    right: 40px;
+    padding: 0px;
+}
+
 }
