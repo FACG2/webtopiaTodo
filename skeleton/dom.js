@@ -71,7 +71,6 @@ localStorage.setItem('newState', JSON.stringify(newState1));
       localStorage.setItem('newState', JSON.stringify(newState));
 
       update(newState);
-      console.log(state);
     });
 
     // add classes for css
@@ -85,7 +84,6 @@ localStorage.setItem('newState', JSON.stringify(newState1));
       event.preventDefault();
       //var newDescription = document.getElementById("add-todo").description.value;
       var newDescription = document.getElementsByName("description")[0].value;
-      //console.log(newDescription);
       var todoObject = {
         description: newDescription
       };
