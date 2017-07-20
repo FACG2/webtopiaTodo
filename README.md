@@ -1,6 +1,4 @@
 # webtopiaTodo
-Todo list app
-# webtopiaTodo
 
 ### A simple To Do List website.
 > A simple to do list website, which is responsive, accessibility, easy to use, interactive, and don't have fish memory!  :laughing: ...
